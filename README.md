@@ -1,24 +1,9 @@
-# chien
+# ちえん
 
-## Project setup
-```
-npm install
-```
+![ちえん](public/demo.jpg)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+ちえんとは、サイト読み込み速度の単位です。
 
-### Compiles and minifies for production
-```
-npm run build
-```
+ちえんが大きいほど通信状況が悪いということです。
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+完全にネタ作品です。RTAで、結果は25分程度でした。

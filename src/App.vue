@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div style="padding-top: 50px; text-align: center">
+        <img src="./assets/pien.png?{{ new Date()}}" @load="loaded" style="height: 0; opacity: 0; width: 0" alt="測定用ぴえん"/>
+        <img src="./assets/pien-icon.png" style="margin: auto; min-width: 200px; width: 10%" alt="ぴえん"/>
+        <h1>あなたのちえんは{{ score }}です</h1>
+        <p>少ない方がいいスコアです</p>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    name: 'App',
+    data() {
+        return {
+            onCreated: '',
+            onLoaded: '',
+            score: 0
+        }
+    },
+    created() {
+        this.onCreated = new Date().getTime()
+    },
+    methods: {
+        loaded() {
+            this.onLoaded = new Date().getTime()
+            this.score = this.onLoaded - this.onCreated
+        }
+    }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
